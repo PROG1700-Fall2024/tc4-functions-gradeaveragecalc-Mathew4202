@@ -32,7 +32,6 @@ def numeric(letterGrade, modifier):
         print("Invalid letter grade entered.")
         return None
     
-    # Apply modifier
     if modifier == "+":
         if letterGrade not in ("A", "F"):
             numericGrade += 0.3
@@ -40,7 +39,6 @@ def numeric(letterGrade, modifier):
         if letterGrade != "F":
             numericGrade -= 0.3
 
-    # Ensure grade does not exceed 4.0
     numericGrade = min(numericGrade, 4.0)
     
     return numericGrade
@@ -71,5 +69,4 @@ def main():
     else:
         print("\nSome courses had invalid grades and were not counted towards Grade.")
 
-# PROGRAM EXECUTION STARTS HERE
 main()
